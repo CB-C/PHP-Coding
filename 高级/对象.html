@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var person = new Object();
+			person.name = '小江南';
+			person.addr = '陕西';
+			person.hobby = function(){
+				document.write(this.name+'是'+this.addr+'人<br/>');
+			}
+			person.hobby();
+
+		var company = {
+			'name':'小肛南',
+			'hobby':'打飞机',
+			info:function(){
+				document.write(this.name+'喜欢'+this.hobby+'<br/>');
+			}
+		}
+		company.info();
+		//json格式的对象
+
+		var json = {
+			'name':'小江南',
+			'age':26,
+			'school':'家里蹲大学',
+			'addr':'陕西'
+		}
+		document.write(json.school);
+	</script>
+</body>
+</html>

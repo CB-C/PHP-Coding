@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var str = '{ "employees" : [' +'{ "firstName":"John" , "lastName":"Doe" },' +'{ "firstName":"Anna" , "lastName":"Smith" },' +'{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+		eval("var info="+str);
+		for(var i in info.employees){
+			document.write('name:'+info.employees[i].lastName+'.'+info.employees[i].firstName+'<br/>');
+		}
+	</script>
+</body>
+</html>

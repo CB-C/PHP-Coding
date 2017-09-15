@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<button id="btn">点我试试</button>
+	<script type="text/javascript">
+		//匿名函数的5个用处
+			//1、匿名函数自调用
+			(function(){
+				alert('匿名1');
+			})();
+			//2、匿名函数赋值给变量
+			var demo = function(){
+				document.write('匿名2');
+			}
+			demo();
+			//3、匿名函数绑定事件
+			btn.onclick = function(){
+				document.write('小江南');
+			}
+			//4、匿名函数作为函数返回值
+			function noName(){
+				return function(){alert('匿名4')};
+			}
+			noName()();
+			//5、匿名函数作为函数的形参
+			function argu(method){
+				var str = '匿名5';
+				method(str);
+			}
+			argu(function(data){alert(data);});
+	</script>
+</body>
+</html>

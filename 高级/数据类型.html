@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//数据类型
+		document.write(typeof null+'<br/>');
+		document.write(typeof undefined+'<br/>');
+		document.write(typeof Infinity+'<br/>');
+	//JS中的类,以及验证是否属于某个类
+		function Person(){
+			this.name = '张三';
+			this.hobby = '打飞机';
+		}
+		function Hobby(){
+
+		}
+		var obj = new Person();
+		alert(obj instanceof Hobby);
+		// alert(obj.name);
+	//字符串只是具有对象的特征,不是持续的,是临时的
+		document.write('123456' instanceof Object);
+	</script>
+</body>
+</html>

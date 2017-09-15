@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//全局隐式创建var k;(声明变量)
+		function demo(){
+			k = 10;
+		}
+		demo();
+		alert(k);
+	//作用域在声明函数的时候就划分了,不会应为调用而受影响
+		var i = '全局作用域';
+		function fn1(){
+			alert(i);
+		}
+		function fn2(){
+			var i = '局部作用域';
+			fn1();
+		}
+		fn2();
+	//函数快内部,当编译阶段并没有语法错误,执行阶段时变量并没有赋值时,此时变量存储着undefined
+		var p = 100;
+		function demo1(){
+			alert(p);
+			var p = 10;
+			alert(p);
+		}
+		demo1();
+	// 变量i虽然没有被声明就赋值，这是不会影响程序执行的
+		function a(){
+			var i = 'a';
+			function b(){
+				i = 'b';
+				function c(){
+					i = 'c';
+				}
+				c();
+			}
+			b();
+			alert(i);
+		}
+		a();
+	</script>
+</body>
+</html>

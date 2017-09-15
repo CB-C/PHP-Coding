@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var arr = [];
+		arr[0] = 1;
+		arr[1] = 2;
+		alert(arr.length);
+	</script>
+</body>
+</html>
+<script type="text/javascript">
+	function avg(){
+		if(arguments.length>10){
+			return alert('不合法');
+		}
+		for(var i in arguments){
+			if( typeof arguments[i] != 'number'){
+				return alert('不合法');
+			}
+		}
+		var sum = 0;
+		for(var i in arguments){
+			sum += arguments[i];
+		}
+		return sum/arguments.length;
+	}
+	alert(avg(44,54,31,98,'120'));
+	function demo(){
+		i = 10;
+	}
+	demo();
+</script>
